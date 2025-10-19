@@ -1,5 +1,5 @@
 // Character data and management
-export const characters = [
+const characters = [
     { name: 'Warrior', img: '/character1.png', baseHue: 240, stats: { strength: 9, speed: 5, magic: 2, armour: 8 } },
     { 
         name: 'Archer', 
@@ -20,7 +20,7 @@ const ANIMATION_DURATION = 500; // ms
 const characterImageCache = {};
 
 // Update a character slot with new character data
-export function updateCharacterSlot(slot, character, direction) {
+function updateCharacterSlot(slot, character, direction) {
     const imageWrapper = slot.querySelector('.character-image-wrapper');
     // Cleanup: ensure only the topmost image remains before we animate
     const imgs = imageWrapper.querySelectorAll('.character-image');
@@ -130,7 +130,7 @@ export function updateCharacterSlot(slot, character, direction) {
     }, ANIMATION_DURATION / 2);
 }
 
-export function preprocessCharacters() {
+function preprocessCharacters() {
     const tasks = [];
     document.querySelectorAll('.character-slot').forEach(slot => {
         const img = slot.querySelector('.character-image');
@@ -159,7 +159,7 @@ export function preprocessCharacters() {
     return Promise.all(tasks);
 }
 
-export async function preloadAllCharacterImages() {
+async function preloadAllCharacterImages() {
     console.log("Preloading all character image variants...");
     const colors = ['blue', 'green', 'yellow', 'red', 'lightblue', 'lightgreen', 'darkyellow', 'pink'];
     const promises = [];

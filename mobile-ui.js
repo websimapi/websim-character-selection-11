@@ -1,6 +1,4 @@
 // Mobile-specific UI logic, extracted from ui.js
-import { characters } from './characters.js';
-import { stoneShiftBuffer } from './audio.js';
 
 function setupMobileSlotPicker() {
     const picker = document.getElementById('mobile-slot-picker');

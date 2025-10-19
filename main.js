@@ -10,15 +10,9 @@
 // removed preprocessCharacters() function - now in characters.js
 // removed all networking and game state variables, they are now in game-state.js and peer-manager.js
 
-import { initializeMobile } from './mobile.js';
-import { preloadAllCharacterImages } from './characters.js';
-import { initializePeerJS } from './peer-manager.js';
-import { initializeCharacterSelection, initializeStartOverlay } from './ui.js';
-import { initializeRelicCursor } from './cursor.js';
-
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', async () => {
-    initializeMobile();
+    initializeMobile(); // Changed from forceLandscape()
     initializeRelicCursor();
     
     // Preload all character images before doing anything else
