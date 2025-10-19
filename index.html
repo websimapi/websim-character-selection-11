@@ -32,12 +32,8 @@
         </header>
         <div id="players-strip" class="players-strip"></div>
         <div class="characters-grid-container">
-            <div class="characters-grid">
-                <!-- 
-                    removed 8 character-slot divs.
-                    They are now generated dynamically in ui.js by generateCharacterSlots().
-                -->
-            </div>
+            <!-- Character slots are generated dynamically by slot-generator.js -->
+            <div class="characters-grid"></div>
         </div>
         
     </div>
@@ -120,6 +116,7 @@
     <script src="grayscale-quantize.js"></script>
     <script src="palette-recolor.js"></script>
     <script src="color-shader.js"></script>
+    <script src="slot-generator.js"></script>
     <script src="mobile.js"></script>
     <script src="mobile-ui.js"></script>
     <script src="qr-scanner.js"></script>

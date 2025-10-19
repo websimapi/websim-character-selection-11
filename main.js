@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     initializeMobile(); // Changed from forceLandscape()
     initializeRelicCursor();
     
+    // Generate character slots dynamically
+    generateCharacterSlots();
+    
     // Preload all character images before doing anything else
     await preloadAllCharacterImages();
 
