@@ -15,12 +15,12 @@
 .player-chip img { width: 100%; height: 100%; object-fit: contain; }
 
 .player-chip[data-color="blue"] { border-color: #4a9eff; }
-.player-chip[data-color="green"] { border-color: #4ade80; }
+.player-chip[data-color="green"] { border-color: #228B22; } /* ForestGreen */
 .player-chip[data-color="yellow"] { border-color: #fbbf24; }
 .player-chip[data-color="red"] { border-color: #ef4444; }
 .player-chip[data-color="lightblue"] { border-color: #80bfff; }
-.player-chip[data-color="lightgreen"] { border-color: #81e6a8; }
-.player-chip[data-color="darkyellow"] { border-color: #f59e0b; }
+.player-chip[data-color="lightgreen"] { border-color: #a7ffb4; }
+.player-chip[data-color="darkyellow"] { border-color: #DAA520; } /* GoldenRod */
 .player-chip[data-color="pink"] { border-color: #f472b6; }
 
 .mobile-slot-picker {
@@ -35,12 +35,12 @@
 .mobile-slot-picker.hidden { display: none; }
 .slot-pill { width: 22px; height: 22px; border-radius: 5px; border: 2px solid #fff; position: relative; }
 .slot-pill[data-color="blue"] { background: #4a9eff; }
-.slot-pill[data-color="green"] { background: #4ade80; }
+.slot-pill[data-color="green"] { background: #228B22; } /* ForestGreen */
 .slot-pill[data-color="yellow"] { background: #fbbf24; }
 .slot-pill[data-color="red"] { background: #ef4444; }
 .slot-pill[data-color="lightblue"] { background: #80bfff; }
-.slot-pill[data-color="lightgreen"] { background: #81e6a8; }
-.slot-pill[data-color="darkyellow"] { background: #f59e0b; }
+.slot-pill[data-color="lightgreen"] { background: #a7ffb4; }
+.slot-pill[data-color="darkyellow"] { background: #DAA520; } /* GoldenRod */
 .slot-pill[data-color="pink"] { background: #f472b6; }
 .slot-pill.occupied::after {
     content: ""; position: absolute; inset: 0;
@@ -50,12 +50,12 @@
     box-shadow: 0 0 0 3px white, 0 0 0 5px var(--border-color);
 }
 .slot-pill[data-color="blue"].current { --border-color: #4a9eff; }
-.slot-pill[data-color="green"].current { --border-color: #4ade80; }
+.slot-pill[data-color="green"].current { --border-color: #228B22; } /* ForestGreen */
 .slot-pill[data-color="yellow"].current { --border-color: #fbbf24; }
 .slot-pill[data-color="red"].current { --border-color: #ef4444; }
 .slot-pill[data-color="lightblue"].current { --border-color: #80bfff; }
-.slot-pill[data-color="lightgreen"].current { --border-color: #81e6a8; }
-.slot-pill[data-color="darkyellow"].current { --border-color: #f59e0b; }
+.slot-pill[data-color="lightgreen"].current { --border-color: #a7ffb4; }
+.slot-pill[data-color="darkyellow"].current { --border-color: #DAA520; } /* GoldenRod */
 .slot-pill[data-color="pink"].current { --border-color: #f472b6; }
 
 @media (min-width: 901px) { .mobile-slot-picker { display: none; } }

@@ -35,7 +35,7 @@
 }
 
 .character-slot[data-color="green"] .character-frame {
-    border-color: #4ade80;
+    border-color: #228B22; /* ForestGreen */
 }
 
 .character-slot[data-color="yellow"] .character-frame {
@@ -51,11 +51,11 @@
 }
 
 .character-slot[data-color="lightgreen"] .character-frame {
-    border-color: #81e6a8;
+    border-color: #a7ffb4;
 }
 
 .character-slot[data-color="darkyellow"] .character-frame {
-    border-color: #f59e0b;
+    border-color: #DAA520; /* GoldenRod */
 }
 
 .character-slot[data-color="pink"] .character-frame {
@@ -79,7 +79,7 @@
 }
 
 .character-slot[data-color="green"] .select-character-text {
-    color: #4ade80;
+    color: #228B22; /* ForestGreen */
 }
 
 .character-slot[data-color="yellow"] .select-character-text {
@@ -95,11 +95,11 @@
 }
 
 .character-slot[data-color="lightgreen"] .select-character-text {
-    color: #81e6a8;
+    color: #a7ffb4;
 }
 
 .character-slot[data-color="darkyellow"] .select-character-text {
-    color: #f59e0b;
+    color: #DAA520; /* GoldenRod */
 }
 
 .character-slot[data-color="pink"] .select-character-text {
@@ -247,7 +247,7 @@
 }
 
 .character-slot[data-color="green"] .player-indicator {
-    color: #4ade80;
+    color: #228B22; /* ForestGreen */
 }
 
 .character-slot[data-color="yellow"] .player-indicator {
@@ -263,11 +263,11 @@
 }
 
 .character-slot[data-color="lightgreen"] .player-indicator {
-    color: #81e6a8;
+    color: #a7ffb4;
 }
 
 .character-slot[data-color="darkyellow"] .player-indicator {
-    color: #f59e0b;
+    color: #DAA520; /* GoldenRod */
 }
 
 .character-slot[data-color="pink"] .player-indicator {

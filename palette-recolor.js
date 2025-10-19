@@ -1,6 +1,6 @@
 // Palette-based recolor: 8 grayscale bands -> slot color + per-character accents + skin + hair
 (function(){
-  const SLOT_HUES = { blue: 240, green: 120, yellow: 60, red: 0, lightblue: 210, lightgreen: 140, darkyellow: 40, pink: 330 };
+  const SLOT_HUES = { blue: 240, green: 120, yellow: 60, red: 0, lightblue: 210, lightgreen: 130, darkyellow: 48, pink: 330 };
   const DEFAULT_PALETTES = {
     Warrior: { skinH: 28, skinS: 0.45, skinL: 0.72, unique1: '#9aa3ad', unique2: '#6b3f1f' },
     Archer:  { skinH: 30, skinS: 0.55, skinL: 0.60, unique1: '#8b5a2b', unique2: '#2e8b57' },
@@ -25,8 +25,21 @@
 
   function slotShadeColor(hue, band){
     const shadeIdx = band - 1; // 0..3
-    const sat = [0.65, 0.70, 0.75, 0.80][shadeIdx];
-    const light = [0.28, 0.42, 0.60, 0.78][shadeIdx];
+    let sat, light;
+    if (hue === 120) { // Dark green
+        sat = [0.60, 0.65, 0.70, 0.75][shadeIdx];
+        light = [0.22, 0.28, 0.34, 0.40][shadeIdx];
+    } else if (hue === 130) { // Light green
+        sat = [0.70, 0.75, 0.80, 0.85][shadeIdx];
+        light = [0.70, 0.75, 0.80, 0.85][shadeIdx];
+    } else if (hue === 48) { // Darker yellow/gold
+        sat = [0.68, 0.72, 0.76, 0.80][shadeIdx];
+        light = [0.30, 0.40, 0.50, 0.60][shadeIdx];
+    }
+    else {
+        sat = [0.65, 0.70, 0.75, 0.80][shadeIdx];
+        light = [0.28, 0.42, 0.60, 0.78][shadeIdx];
+    }
     return hslToRgb(hue, sat, light);
   }
 

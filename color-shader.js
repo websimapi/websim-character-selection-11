@@ -5,8 +5,8 @@ const slotColors = {
     yellow: 60,
     red: 0,
     lightblue: 210,
-    lightgreen: 140,
-    darkyellow: 40,
+    lightgreen: 130,
+    darkyellow: 48,
     pink: 330
 };
 const grayscaleCache = {};
