@@ -1,13 +1,17 @@
 // UI interaction management
-function initializeCharacterSelection() {
-    const characterSlots = document.querySelectorAll('.character-slot');
+import { createCharacterSlotElement } from './character-slot.js';
 
-    characterSlots.forEach((slot, index) => {
-        // Initial setup
-        const slotData = playerSlots[index];
+function initializeCharacterSelection() {
+    const charactersGrid = document.querySelector('.characters-grid');
+    charactersGrid.innerHTML = ''; // Clear any existing content
+
+    playerSlots.forEach((slotData, index) => {
+        const slot = createCharacterSlotElement(slotData, index);
+        charactersGrid.appendChild(slot);
+
+        // Initial setup for empty/occupied state
         if (!slotData.occupied) {
             slot.classList.add('empty');
-            // ensure skull overlay exists for empty slots on load
             if (!slot.querySelector('.skull-overlay')) {
                 const wrap = slot.querySelector('.character-image-wrapper');
                 const skull = document.createElement('div');
@@ -16,17 +20,11 @@ function initializeCharacterSelection() {
                 wrap.appendChild(skull);
             }
         }
-
-        // Initial gender setup for archer
-        if(slot.dataset.characterIndex === '1') {
-            slot.dataset.archerGender = 'male';
-            slot.querySelector('.gender-toggle-container').style.visibility = 'visible';
-        }
-
+        
         // Initial color shader application
         applyColorShader(slot);
 
-        // Arrow click listeners for character swapping (only for host or own slot)
+        // Arrow click listeners for character swapping
         const leftArrow = slot.querySelector('.left-arrow');
         const rightArrow = slot.querySelector('.right-arrow');
 
@@ -92,6 +90,7 @@ function initializeCharacterSelection() {
             requestSlotSwitch(index);
         });
     });
+
     setupMobileSlotPicker();
 }
 
