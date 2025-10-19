@@ -1,4 +1,6 @@
 // PeerJS connection and data management
+import { characters, updateCharacterSlot } from './characters.js';
+
 function initializePeerJS() {
     peer = new Peer();
     

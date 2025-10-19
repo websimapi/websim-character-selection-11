@@ -1,5 +1,6 @@
 // UI interaction management
 import { createCharacterSlotElement } from './character-slot.js';
+import { characters, updateCharacterSlot } from './characters.js';
 
 function initializeCharacterSelection() {
     const charactersGrid = document.querySelector('.characters-grid');
