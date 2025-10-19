@@ -1,6 +1,6 @@
 // Palette-based recolor: 8 grayscale bands -> slot color + per-character accents + skin + hair
 (function(){
-  const SLOT_HUES = { blue: 240, green: 120, yellow: 60, red: 0 };
+  const SLOT_HUES = { blue: 240, green: 120, yellow: 60, red: 0, lightblue: 210, lightgreen: 140, darkyellow: 40, pink: 330 };
   const DEFAULT_PALETTES = {
     Warrior: { skinH: 28, skinS: 0.45, skinL: 0.72, unique1: '#9aa3ad', unique2: '#6b3f1f' },
     Archer:  { skinH: 30, skinS: 0.55, skinL: 0.60, unique1: '#8b5a2b', unique2: '#2e8b57' },
